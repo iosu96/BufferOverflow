@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#chmod +x compile
+
+gcc -g bufferOverflow.c -o exploitMe -fno-stack-protector
+
+#-g for debbuging info in GDB
+#fno-stack-protector turns off the default guard checks for stack smashing
+
+# GBD Notes
+# list - view code
+# disas main - view machine code of program
+# run <var1> - to run program
+# run $(python3 -c 'print("\x41" * 499)')
+# info registers - shows register values
+
